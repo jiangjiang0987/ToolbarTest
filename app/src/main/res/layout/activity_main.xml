@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.qingtai.qingtai.toolbartest.MainActivity">
-    <include layout="@layout/topbar"></include>
-    <TextView
+    android:layout_height="match_parent">
+
+    <com.qingtai.qingtai.toolbartest.Toolbar
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        custom:leftBackground="#0000ff"
+        custom:lefttext="back"
+        custom:leftTextColor="#00ff00"
+        custom:rightBackground="#333333"
+        custom:rightText="more"
+        custom:rightTextColor="#ff0000"
+        custom:title="我的标题"
+        custom:titleTextColor="#ff0000"
+        custom:titleTextSize="14sp" />
+    <Button
+        android:id="@+id/button"
+        android:layout_below="@id/tl"
+        android:text="button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_height="wrap_content" />
 </RelativeLayout>
